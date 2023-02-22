@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>3D WEB</title>
+    </head>
+    <body>
+        <div class="bg-clip">
+            <video autoplay muted>
+                <source src="./videos/bg.mp4" />
+            </video>
+        </div>
+        <div id="drag-container">
+            <div id="spin-container">
+                <!-- Add your video or image -->
+                <img src="./imgs/1.jpg" alt="img1" />
+                <img src="./imgs/2.jpg" alt="img2" />
+                <img src="./imgs/3.jpg" alt="img3" />
+                <img src="./imgs/4.jpg" alt="img4" />
+                <img src="./imgs/5.jpg" alt="img5" />
+                <img src="./imgs/6.jpg" alt="img6" />
+                <video id="vidImg" controls autoplay="autoplay" loop>
+                    <source src="./imgs/video1.mp4" type="video/mp4" />
+                </video>
+
+                <p>
+                    motivation
+                    <audio autoplay>
+                        <source src="./mp3/aichoai.mp3" type="audio/mpeg" />
+                    </audio>
+                </p>
+            </div>
+        </div>
+
+        <div id="ground"></div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
