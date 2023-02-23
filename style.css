@@ -196,7 +196,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 821px) {
     .snow_wrap p {
         display: block;
     }
