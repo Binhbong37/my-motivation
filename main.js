@@ -6,6 +6,11 @@ var imgHeight = 170;
 
 setTimeout(init, 100);
 
+document.body.addEventListener('click', () => {
+    document.getElementById('autoPlayAudio').play();
+    console.log('Clicked');
+});
+
 var obox = document.getElementById('drag-container');
 var ospin = document.getElementById('spin-container');
 var aImg = ospin.getElementsByTagName('img');

@@ -165,11 +165,13 @@ body {
 }
 
 .snow::after {
+    content: '';
     margin-left: -250px;
     opacity: 0.5;
     filter: blur(2px);
 }
 .snow::before {
+    content: '';
     margin-left: -350px;
     opacity: 0.7;
     filter: blur(1px);
