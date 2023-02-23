@@ -8,6 +8,7 @@ setTimeout(init, 100);
 
 document.body.addEventListener('click', () => {
     document.getElementById('autoPlayAudio').play();
+    document.getElementById('touch-me').style.display = 'none';
     console.log('Clicked');
 });
 

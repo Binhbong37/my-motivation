@@ -185,3 +185,19 @@ body {
         transform: translateY(650px);
     }
 }
+
+.snow_wrap p {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .snow_wrap p {
+        display: block;
+    }
+}
