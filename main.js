@@ -1,8 +1,17 @@
 const autoRotate = true;
 const rotateSpeed = -60;
-const imgWidth = 120;
-const imgHeight = 170;
-let radius = 240;
+let radius = 300;
+
+const respon821 = window.matchMedia('(max-width: 821px)');
+const respon625 = window.matchMedia('(max-width: 625px)');
+
+if (respon821.matches) {
+    radius = 250;
+}
+
+if (respon625.matches) {
+    radius = 150;
+}
 
 setTimeout(init, 100);
 
@@ -18,9 +27,6 @@ const aImg = ospin.getElementsByTagName('img');
 const aVid = ospin.getElementsByTagName('video');
 
 const aEle = [...aImg, ...aVid];
-
-ospin.style.width = imgWidth + 'px';
-ospin.style.height = imgHeight + 'px';
 
 const ground = document.getElementById('ground');
 ground.style.width = radius * 3 + 'px';
