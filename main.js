@@ -1,8 +1,8 @@
-var radius = 240;
-var autoRotate = true;
-var rotateSpeed = -60;
-var imgWidth = 120;
-var imgHeight = 170;
+const autoRotate = true;
+const rotateSpeed = -60;
+const imgWidth = 120;
+const imgHeight = 170;
+let radius = 240;
 
 setTimeout(init, 100);
 
@@ -12,22 +12,22 @@ document.body.addEventListener('click', () => {
     console.log('Clicked');
 });
 
-var obox = document.getElementById('drag-container');
-var ospin = document.getElementById('spin-container');
-var aImg = ospin.getElementsByTagName('img');
-var aVid = ospin.getElementsByTagName('video');
+const obox = document.getElementById('drag-container');
+const ospin = document.getElementById('spin-container');
+const aImg = ospin.getElementsByTagName('img');
+const aVid = ospin.getElementsByTagName('video');
 
-var aEle = [...aImg, ...aVid];
+const aEle = [...aImg, ...aVid];
 
 ospin.style.width = imgWidth + 'px';
 ospin.style.height = imgHeight + 'px';
 
-var ground = document.getElementById('ground');
+const ground = document.getElementById('ground');
 ground.style.width = radius * 3 + 'px';
 ground.style.height = radius * 3 + 'px';
 
 function init(delayTime) {
-    for (var i = 0; i < aEle.length; i++) {
+    for (let i = 0; i < aEle.length; i++) {
         aEle[i].style.transform =
             'rotateY(' +
             i * (360 / aEle.length) +
@@ -61,7 +61,7 @@ var sX,
     tY = 10;
 
 if (autoRotate) {
-    var animationName = rotateSpeed > 0 ? 'spin' : 'spinRevert';
+    const animationName = rotateSpeed > 0 ? 'spin' : 'spinRevert';
     ospin.style.animation = `${animationName} ${Math.abs(
         rotateSpeed
     )}s infinite linear`;
@@ -107,7 +107,7 @@ document.onpointerdown = function (e) {
 
 document.onmousewheel = function (e) {
     e = e || window.event;
-    var d = e.wheelDelta / 20 || -e.detail;
+    const d = e.wheelDelta / 20 || -e.detail;
     radius += d;
     init(1);
 };
